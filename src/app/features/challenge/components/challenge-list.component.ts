@@ -1,4 +1,11 @@
-import { Component, inject, signal, Signal, WritableSignal } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  signal,
+  Signal,
+  WritableSignal,
+} from '@angular/core';
 import { ChallengeService } from '../services/challenge.service';
 import { Challenge } from '../models/challenge.model';
 
@@ -8,20 +15,25 @@ import { Challenge } from '../models/challenge.model';
   template: `
     <div class="challenge-list">
       @for (challenge of challenges(); track challenge.id) {
-        <div class="challenge-card">
-          <h2>{{ challenge.title }}</h2>
-          <p>{{ challenge.description }}</p>
-          <ul>
-            @for (rule of challenge.rules; track rule) {
-              <li>{{ rule }}</li>
-            }
-          </ul>
-          <p><strong>Difficoltà:</strong> {{ challenge.difficulty }}</p>
-          @if (challenge.bonus) {
-            <p><strong>Bonus:</strong> {{ challenge.bonus }}</p>
+      <div class="challenge-card">
+        <h2>{{ challenge.name }}</h2>
+        <p>{{ challenge.description }}</p>
+        <h3>Regole:</h3>
+        <ul>
+          @for (rule of challenge.rules; track rule) {
+          <li>{{ rule }}</li>
           }
-          <button (click)="startChallenge(challenge.id)">Inizia Sfida</button>
-        </div>
+        </ul>
+        <p><strong>Difficoltà:</strong> {{ challenge.difficulty }}</p>
+        <p><strong>Bonus:</strong> {{ challenge.bonus }}</p>
+        <p>
+          <strong>Azioni richieste:</strong>
+          {{ challenge.actionsRequired.join(', ') }}
+        </p>
+        <p>
+          <strong>Violazioni massime:</strong> {{ challenge.maxViolations }}
+        </p>
+      </div>
       }
     </div>
   `,
@@ -46,16 +58,18 @@ import { Challenge } from '../models/challenge.model';
     grid-template-columns: 1fr;
   }
 }
-  `
+  `,
 })
-export class ChallengeListComponent {
-  private challengeService:ChallengeService = inject(ChallengeService);
+export class ChallengeListComponent implements OnInit{
+  private challengeService: ChallengeService = inject(ChallengeService);
 
-  protected readonly challenges:WritableSignal<Challenge[]> = signal(this.challengeService.getChallenges());
+  protected readonly challenges: WritableSignal<Challenge[]> = signal([]);
 
-  startChallenge(id:string){
-    //Logic to start the challenge
-    console.log(`started challenge with ID: ${id}`);
+  ngOnInit(){
+    this.loadChallenges();
   }
 
+  loadChallenges():void{
+    this.challengeService.getChallenges().subscribe((data)=>this.challenges.set(data));
+  }
 }
