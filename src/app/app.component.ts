@@ -11,7 +11,7 @@ type Item = {
   template: `
     <h1>Welcome to {{ title }}!</h1>
 
-    <button (click)="toggleShow()">Toggle Message</button>
+    <button (click)="toggleShow()">Toggle UPDate Message</button>
 
     @if (showMessage()) {
       <p>Welcome! This is a Progressive Web App built with Angular 19.</p>
