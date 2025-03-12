@@ -13,7 +13,9 @@ import { Challenge } from '../models/challenge.model';
   selector: 'app-challenge-list',
   imports: [],
   template: `
+    <button (click)="refreshChallenges()">Refresh</button>
     <div class="challenge-list">
+      <!-- Add this button -->
       @for (challenge of challenges(); track challenge.id) {
       <div class="challenge-card">
         <h2>{{ challenge.name }}</h2>
@@ -60,16 +62,23 @@ import { Challenge } from '../models/challenge.model';
 }
   `,
 })
-export class ChallengeListComponent implements OnInit{
+export class ChallengeListComponent implements OnInit {
   private challengeService: ChallengeService = inject(ChallengeService);
 
   protected readonly challenges: WritableSignal<Challenge[]> = signal([]);
 
-  ngOnInit(){
+  ngOnInit() {
     this.loadChallenges();
   }
 
-  loadChallenges():void{
-    this.challengeService.getChallenges().subscribe((data)=>this.challenges.set(data));
+  loadChallenges(): void {
+    this.challengeService
+      .getChallenges()
+      .subscribe((data) => this.challenges.set(data));
+  }
+
+  refreshChallenges(): void {
+    localStorage.removeItem('challenges'); // Clear the cached data
+    this.loadChallenges(); // Reload the challenges
   }
 }
