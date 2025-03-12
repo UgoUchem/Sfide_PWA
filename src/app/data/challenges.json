@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Sfida del Silenzio Strategico",
+    "description": "Non dire parolacce, limitare lamentele e commenti negativi per un mese.",
+    "rules": [
+      "Non dire parolacce",
+      "Limitare lamentele e commenti negativi",
+      "Trasformare commenti negativi in positivi per guadagnare punti extra"
+    ],
+    "difficulty": "Alta",
+    "bonus": "Punti extra per commenti positivi",
+    "actionsRequired": [
+      "Limitare lamentele",
+      "Trasformare commenti negativi in positivi"
+    ],
+    "maxViolations": 3
+  },
+  {
+    "id": 2,
+    "name": "Sfida dell'Autodisciplina",
+    "description": "Mantenere una routine disciplinata per un mese.",
+    "rules": [
+      "Rifare il letto ogni mattina",
+      "Niente telefono a tavola",
+      "Finire i compiti prima di svagarsi"
+    ],
+    "difficulty": "Molto alta",
+    "bonus": "Nessun bonus",
+    "actionsRequired": ["Mantenere routine disciplinate"],
+    "maxViolations": 3
+  },
+  {
+    "id": 3,
+    "name": "Sfida della Creatività Pulita",
+    "description": "Ogni volta che senti il bisogno di dire una parolaccia, inventa una parola buffa.",
+    "rules": [
+      "Inventa una parola buffa per ogni parolaccia",
+      "Ricordarsi le parole inventate",
+      "Usare le parole in modo creativo"
+    ],
+    "difficulty": "Media",
+    "bonus": "Premio per la parola più divertente",
+    "actionsRequired": [
+      "Invenzione di parole buffe",
+      "Uso creativo delle parole inventate"
+    ],
+    "maxViolations": 2
+  },
+  {
+    "id": 4,
+    "name": "Sfida della Pazienza e Gentilezza",
+    "description": "Compi almeno una buona azione al giorno.",
+    "rules": [
+      "Compi almeno una buona azione al giorno",
+      "Se passi 3 giorni senza una buona azione, sei eliminato"
+    ],
+    "difficulty": "Alta",
+    "bonus": "Premio per chi ha il maggior numero di azioni gentili",
+    "actionsRequired": ["Fare buone azioni quotidiane"],
+    "maxViolations": 3
+  },
+  {
+    "id": 5,
+    "name": "Sfida delle Multitasking Skills",
+    "description": "Impara una nuova abilità ogni settimana e insegnala agli altri.",
+    "rules": [
+      "Impara una nuova abilità ogni settimana",
+      "Insegna un'abilità agli altri fratelli/sorelle per punti extra"
+    ],
+    "difficulty": "Media",
+    "bonus": "Punti extra per insegnare abilità agli altri",
+    "actionsRequired": [
+      "Imparare nuove abilità",
+      "Insegnare abilità agli altri"
+    ],
+    "maxViolations": 2
+  }
+]
