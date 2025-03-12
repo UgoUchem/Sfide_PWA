@@ -1,5 +1,5 @@
 export type Challenge = {
-  id: number;
+  id: string;
   name: string;
   description: string;
   rules: string[];

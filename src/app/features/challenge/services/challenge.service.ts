@@ -14,7 +14,7 @@ export class ChallengeService {
   private readonly http: HttpClient = inject(HttpClient);
 
   getChallenges(): Observable<Challenge[]> {
-    const cachedChallenges = localStorage.getItem('challenges');
+    const cachedChallenges:string|null = localStorage.getItem('challenges');
 
     if (cachedChallenges) {
       return of(JSON.parse(cachedChallenges)); // Load cached data instantly
