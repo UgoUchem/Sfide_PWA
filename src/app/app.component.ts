@@ -10,8 +10,11 @@ type Item = {
   selector: 'app-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{ title }}!</h1>
-    <router-outlet></router-outlet>
+    <div class="app-container">
+      <!-- Router outlet for loading routed components like LoginComponent -->
+      <router-outlet></router-outlet>
+      
+    </div>
     <!-- <app-challenge-list></app-challenge-list> -->
   `,
   styles: [],

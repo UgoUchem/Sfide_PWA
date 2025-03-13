@@ -92,7 +92,11 @@ export default class ChallengeListComponent implements OnInit {
     if (this.username) {
       this.challengeService
         .getChallenges(this.username)
-        .subscribe((data) => this.challenges.set(data));
+        .subscribe((data) => {
+          console.log("Loaded challenges:", data); //Check the challenges loaded
+          this.challenges.set(data) // Update the signal with the filtered ones
+        }  
+      );
     }
   }
 
