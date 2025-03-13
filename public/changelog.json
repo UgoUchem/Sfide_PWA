@@ -17,6 +17,15 @@
           "Aggiunto sistema di login",
           "Supporto per notifiche push"
         ]
+      },
+      {
+        "version": "1.0.0",
+        "date": "2025-03-01",
+        "changes": [
+          "Prima versione dell'app",
+          "Aggiunto sistema di login",
+          "Supporto per notifiche push"
+        ]
       }
     ]
   }
