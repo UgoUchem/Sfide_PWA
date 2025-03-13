@@ -1,191 +1,187 @@
 /* You can add global styles to this file, and also import other style files */
-  /* Anime-Inspired Global Styles */
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Russo+One&display=swap');
+/* Anime-Inspired Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Russo+One&display=swap");
 
-  body {
-    background-image: url("../public/icegif-2013.gif");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-family: 'Russo One', sans-serif;
-    animation: fadeIn 2s ease-in-out;
+body {
+  background-image: url("../public/icegif-2013.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-family: "Russo One", sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  to {
+    opacity: 1;
   }
-  
-  /* Login Page */
-  .login-container {
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 0 15px rgba(255, 0, 150, 0.8);
-    animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Login Page */
+.login-container {
+  width: 90%;
+  max-width: 40%;
+  margin: 20% auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 0, 150, 0.8);
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 0, 150, 0.5);
   }
-  
-  @keyframes neonGlow {
-    from { box-shadow: 0 0 10px rgba(255, 0, 150, 0.5); }
-    to { box-shadow: 0 0 25px rgba(255, 0, 150, 0.9); }
+  to {
+    box-shadow: 0 0 25px rgba(255, 0, 150, 0.9);
   }
-  
-  .header h2 {
-    font-size: 28px;
-    font-family: 'Press Start 2P', cursive;
-    color: #ff4d6d;
-    text-shadow: 3px 3px 0px #000;
-    animation: titleBounce 1.2s infinite alternate;
+}
+
+.header h2 {
+  font-size: 28px;
+  font-family: "Press Start 2P", cursive;
+  color: #ff4d6d;
+  text-shadow: 3px 3px 0px #000;
+  animation: titleBounce 1.2s infinite alternate;
+}
+
+@keyframes titleBounce {
+  from {
+    transform: translateY(0);
   }
-  
-  @keyframes titleBounce {
-    from { transform: translateY(0); }
-    to { transform: translateY(-5px); }
+  to {
+    transform: translateY(-5px);
   }
-  
-  input {
-    padding: 12px;
-    margin-top: 10px;
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid #ff4d6d;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
-    text-align: center;
+}
+
+input {
+  padding: 12px;
+  margin-top: 10px;
+  width: 90%;
+  border-radius: 8px;
+  border: 2px solid #ff4d6d;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.9);
+}
+
+.submit-container button {
+  padding: 15px;
+  background: linear-gradient(90deg, #ff4d6d, #ff007f);
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 2px 2px 4px black;
+}
+
+.submit-container button:hover {
+  background: linear-gradient(90deg, #ff007f, #ff4d6d);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 0, 150, 0.9);
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  animation: shake 0.3s infinite alternate;
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-5px);
   }
-  
-  input:focus {
-    outline: none;
-    border-color: #00d9ff;
-    box-shadow: 0 0 15px rgba(0, 217, 255, 0.9);
+  to {
+    transform: translateX(5px);
   }
-  
-  .submit-container button {
-    padding: 15px;
-    background: linear-gradient(90deg, #ff4d6d, #ff007f);
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    width: 100%;
-    cursor: pointer;
-    transition: 0.3s;
-    border: none;
-    font-family: 'Press Start 2P', cursive;
-    text-shadow: 2px 2px 4px black;
-  }
-  
-  .submit-container button:hover {
-    background: linear-gradient(90deg, #ff007f, #ff4d6d);
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 0, 150, 0.9);
-  }
-  
-  .error-message {
-    color: #ff0000;
-    font-size: 14px;
-    margin-top: 10px;
-    font-weight: bold;
-    animation: shake 0.3s infinite alternate;
-  }
-  
-  @keyframes shake {
-    from { transform: translateX(-5px); }
-    to { transform: translateX(5px); }
-  }
-  
-  /* Challenge Page */
+}
+
+/* Challenge Page */
 .challenge-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    padding: 16px;
-  }
-  
-  .challenge-card {
-    border: 2px solid #00ffff; /* Ciano neon */
-    border-radius: 12px;
-    padding: 16px;
-    background: rgba(0, 255, 255, 0.85); /* Ciano chiaro */
-    color: #ffffff; /* Bianco per il testo */
-    box-shadow: 0 0 12px rgba(255, 77, 109, 0.6);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .challenge-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 77, 109, 0.9);
-  }
-  
-  // @media (max-width: 600px) {
-  //   .login-container, .challenge-list {
-  //     max-width: 300px;
-  //   }
-  
-  //   .header h2 {
-  //     font-size: 22px;
-  //   }
-  
-  //   input {
-  //     font-size: 14px;
-  //     padding: 10px;
-  //   }
-  
-  //   .submit-container button {
-  //     font-size: 16px;
-  //     padding: 12px;
-  //   }
-  // }
-  /* Media query for small screens (smartphones) */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.challenge-card {
+  border: 2px solid #00ffff; /* Ciano neon */
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(0, 255, 255, 0.85); /* Ciano chiaro */
+  color: #ffffff; /* Bianco per il testo */
+  box-shadow: 0 0 12px rgba(255, 77, 109, 0.6);
+  transition: transform 0.3s ease-in-out;
+}
+
+.challenge-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.9);
+}
+
+/* Media query for small screens (smartphones) */
 @media (max-width: 600px) {
   /* General container adjustments */
   .login-container,
   .challenge-list {
-    max-width: 90%;  /* Use a percentage instead of a fixed max-width to ensure better scaling */
-    margin: 0 auto;  /* Center the container */
+    max-width: 90%; /* Use a percentage instead of a fixed max-width to ensure better scaling */
+    margin: 0 auto; /* Center the container */
   }
 
   /* Header font size adjustment */
   .header h2 {
-    font-size: 18px;  /* Reduce font size for smaller screens */
-    text-align: center;  /* Center the header text */
+    font-size: 18px; /* Reduce font size for smaller screens */
+    text-align: center; /* Center the header text */
   }
 
   /* Input adjustments */
   input {
     font-size: 14px;
     padding: 10px;
-    width: 100%;  /* Ensure inputs take up the full width of their container */
-    margin-bottom: 10px;  /* Add space between input fields */
-    box-sizing: border-box;  /* Prevent input from overflowing */
+    width: 100%; /* Ensure inputs take up the full width of their container */
+    margin-bottom: 10px; /* Add space between input fields */
+    box-sizing: border-box; /* Prevent input from overflowing */
   }
 
   /* Button adjustments */
   .submit-container button {
     font-size: 16px;
     padding: 12px;
-    width: 100%;  /* Make buttons full width for easier clicking on small screens */
+    width: 100%; /* Make buttons full width for easier clicking on small screens */
     box-sizing: border-box;
   }
 
   /* Challenge list styling */
   .challenge-list {
-    padding: 8px;  /* Add padding to the list for some breathing room */
+    padding: 8px; /* Add padding to the list for some breathing room */
   }
 
   /* Adjust challenge cards for smaller screens */
   .challenge-card {
-    padding: 12px;  /* Reduce padding inside cards for a more compact layout */
-    box-shadow: 0 0 8px rgba(255, 77, 109, 0.6);  /* Make shadows slightly less intense */
+    padding: 12px; /* Reduce padding inside cards for a more compact layout */
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.6); /* Make shadows slightly less intense */
   }
 }

@@ -57,17 +57,18 @@ import AdminComponent from "../../login/components/admin.component";
 
 .challenge-card {
   background-color:rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #ddd;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgb(240, 26, 26);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .challenge-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  // transform: scale(1.05);
+  box-shadow: 0 4px 15px rgb(7, 247, 167);
 }
 
 .challenge-card h2 {
