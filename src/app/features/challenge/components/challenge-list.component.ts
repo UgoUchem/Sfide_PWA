@@ -18,8 +18,8 @@ import AdminComponent from "../../login/components/admin.component";
       <!-- Add this button -->
       @for (challenge of challenges(); track challenge.id) {
       <div class="challenge-card">
-        <h2>{{ challenge.name }}</h2>
-        <p>{{ challenge.description }}</p>
+        <div class="challenge-title">{{ challenge.name }}</div>
+        <div class="challenge-description">{{ challenge.description }}</div>
         <h3>Regole:</h3>
         <ul>
           @for (rule of challenge.rules; track rule) {
@@ -44,26 +44,7 @@ import AdminComponent from "../../login/components/admin.component";
     }
   `,
   styles: `
-    /* src/styles.css */
-.challenge-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-  padding: 16px;
-}
 
-.challenge-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: #f9f9f9;
-}
-
-@media (max-width: 600px) {
-  .challenge-list {
-    grid-template-columns: 1fr;
-  }
-}
   `,
 })
 export default class ChallengeListComponent implements OnInit {
