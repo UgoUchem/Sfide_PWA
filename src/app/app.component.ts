@@ -112,7 +112,7 @@ export class AppComponent implements OnInit {
 
   showUpdateNotification(): void {
     // Fetch changelog from the JSON file
-    fetch('../../public/changelog.json')
+    fetch('changelog.json')
       .then((response) => response.json())
       .then((data) => {
         // Find the latest version info
