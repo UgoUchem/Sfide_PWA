@@ -104,8 +104,8 @@
     to { transform: translateX(5px); }
   }
   
-  /* Challenges Page */
-  .challenge-list {
+  /* Challenge Page */
+.challenge-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
@@ -113,11 +113,11 @@
   }
   
   .challenge-card {
-    border: 2px solid #ff4d6d;
+    border: 2px solid #00ffff; /* Ciano neon */
     border-radius: 12px;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.85);
-    color: rgb(0, 250, 154);
+    background: rgba(0, 255, 255, 0.85); /* Ciano chiaro */
+    color: #ffffff; /* Bianco per il testo */
     box-shadow: 0 0 12px rgba(255, 77, 109, 0.6);
     transition: transform 0.3s ease-in-out;
   }
@@ -127,22 +127,65 @@
     box-shadow: 0 0 20px rgba(255, 77, 109, 0.9);
   }
   
-  @media (max-width: 600px) {
-    .login-container, .challenge-list {
-      max-width: 300px;
-    }
+  // @media (max-width: 600px) {
+  //   .login-container, .challenge-list {
+  //     max-width: 300px;
+  //   }
   
-    .header h2 {
-      font-size: 22px;
-    }
+  //   .header h2 {
+  //     font-size: 22px;
+  //   }
   
-    input {
-      font-size: 14px;
-      padding: 10px;
-    }
+  //   input {
+  //     font-size: 14px;
+  //     padding: 10px;
+  //   }
   
-    .submit-container button {
-      font-size: 16px;
-      padding: 12px;
-    }
+  //   .submit-container button {
+  //     font-size: 16px;
+  //     padding: 12px;
+  //   }
+  // }
+  /* Media query for small screens (smartphones) */
+@media (max-width: 600px) {
+  /* General container adjustments */
+  .login-container,
+  .challenge-list {
+    max-width: 90%;  /* Use a percentage instead of a fixed max-width to ensure better scaling */
+    margin: 0 auto;  /* Center the container */
   }
+
+  /* Header font size adjustment */
+  .header h2 {
+    font-size: 18px;  /* Reduce font size for smaller screens */
+    text-align: center;  /* Center the header text */
+  }
+
+  /* Input adjustments */
+  input {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;  /* Ensure inputs take up the full width of their container */
+    margin-bottom: 10px;  /* Add space between input fields */
+    box-sizing: border-box;  /* Prevent input from overflowing */
+  }
+
+  /* Button adjustments */
+  .submit-container button {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;  /* Make buttons full width for easier clicking on small screens */
+    box-sizing: border-box;
+  }
+
+  /* Challenge list styling */
+  .challenge-list {
+    padding: 8px;  /* Add padding to the list for some breathing room */
+  }
+
+  /* Adjust challenge cards for smaller screens */
+  .challenge-card {
+    padding: 12px;  /* Reduce padding inside cards for a more compact layout */
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.6);  /* Make shadows slightly less intense */
+  }
+}

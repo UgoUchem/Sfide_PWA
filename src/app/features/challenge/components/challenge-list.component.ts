@@ -18,8 +18,8 @@ import AdminComponent from "../../login/components/admin.component";
       <!-- Add this button -->
       @for (challenge of challenges(); track challenge.id) {
       <div class="challenge-card">
-        <div class="challenge-title">{{ challenge.name }}</div>
-        <div class="challenge-description">{{ challenge.description }}</div>
+        <h2 class="challenge-title">{{ challenge.name }}</h2>
+        <p class="challenge-description">{{ challenge.description }}</p>
         <h3>Regole:</h3>
         <ul>
           @for (rule of challenge.rules; track rule) {
@@ -44,6 +44,81 @@ import AdminComponent from "../../login/components/admin.component";
     }
   `,
   styles: `
+/* src/styles.css */
+
+/* Layout della lista delle sfide */
+.challenge-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.challenge-card {
+  background-color:rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.challenge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-card h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.challenge-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.challenge-card h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 20px;
+}
+
+.challenge-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.challenge-card li {
+  margin: 5px 0;
+}
+
+.challenge-card strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .challenge-list {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .challenge-card {
+    padding: 15px;
+  }
+
+  .challenge-card h2 {
+    font-size: 1.6rem;
+  }
+}
 
   `,
 })
