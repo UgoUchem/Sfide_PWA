@@ -5,7 +5,6 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import LoginComponent from './features/login/components/login.component';
 import { RouterOutlet } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 
