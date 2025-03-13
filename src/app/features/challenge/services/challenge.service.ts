@@ -65,15 +65,15 @@ export class ChallengeService {
 
       const userChallenges = allChallenges.filter((challenge: Challenge) => {
         console.log("Checking user assignment:", userName, "vs", challenge.assignedTo);
-        // return challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("everyone");
+        // return challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("Everyone");
         challenge.assignedTo.some((name) => name.trim().toLowerCase() === normalizedUserName) || 
-        challenge.assignedTo.includes("everyone")
+        challenge.assignedTo.includes("Everyone")
         
       });
       
       console.log('Cached Challenges:', allChallenges);
       console.log('Filtered Challenges for', userName, ':', userChallenges);
-      
+
       return of(userChallenges); // Load cached data instantly
     }
 
@@ -84,7 +84,7 @@ export class ChallengeService {
         localStorage.setItem('challenges', JSON.stringify(challengesData)); // Cache the challenges
 
         const filteredChallenges = challengesData.filter((challenge: Challenge) =>
-          challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("everyone")
+          challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("Everyone")
         );
   
         console.log("Loaded Local Challenges:", challengesData);
@@ -94,14 +94,32 @@ export class ChallengeService {
     );
   }
 
+  /**
+   * Adds a single challenge.
+   */
   addChallenge(challenge: Challenge): Observable<Challenge> {
     return this.http.post<Challenge>(this.apiUrl, challenge);
   }
+
+  /**
+   * Adds multiple challenges at once.
+   */
   addChallenges(Challenge: Challenge[]): Observable<Challenge[]> {
     return this.http.post<Challenge[]>(this.apiUrl, Challenge);
   }
 
+  /**
+   * Deletes a challenge by its ID.
+   */
   deleteChallenge(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  /**
+   * Clears the cache and reloads challenges.
+   */
+  refreshChallenges(): void {
+    localStorage.removeItem('challenges');
+    console.log("Cache cleared. Reloading challenges...");
   }
 }

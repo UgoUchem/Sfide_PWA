@@ -12,7 +12,7 @@ import { LoginService } from '../services/login.service';
       <h2>Login</h2>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
         <label>Name:</label>
-        <input type="text" formControlName="name" />
+        <input type="text" formControlName="name" (input)="capitalizeFirstLetter()"/>
         <button type="submit" [disabled]="loginForm.invalid">Login</button>
       </form>
       @if(loginError()){
@@ -62,6 +62,15 @@ export default class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       name: ['', Validators.required], // Add validation to the name field
     });
+
+    // transform first letter to uppercase automatically when typing
+    this.loginForm.get('name')?.valueChanges.subscribe((value)=>{
+      if(value){
+        value = value.toLowerCase();
+        value = value.charAt(0).toUpperCase() + value.slice(1);
+        this.loginForm.patchValue({name:value}, {emitEvent:false});
+      }
+    })
   }
   
   // Handle the form submission
@@ -84,6 +93,15 @@ export default class LoginComponent implements OnInit {
       }
       // Redirect or perform additional actions as needed
       console.log(`Logged in as: ${name}`);
+    }
+  }
+
+  capitalizeFirstLetter() {
+    let value = this.loginForm.get('name')?.value;
+    if (value) {
+      value = value.toLowerCase(); // Convert everything to lowercase first
+      value = value.charAt(0).toUpperCase() + value.slice(1); // Capitalize first letter
+      this.loginForm.patchValue({ name: value }, { emitEvent: false });
     }
   }
 }

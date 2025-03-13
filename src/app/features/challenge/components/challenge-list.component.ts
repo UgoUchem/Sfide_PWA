@@ -84,6 +84,8 @@ export default class ChallengeListComponent implements OnInit {
     } else {
       this.loadChallenges();
     }
+    // Handle browser refresh
+    window.addEventListener('beforeunload', this.handleRefresh);
   }
 
   loadChallenges(): void {
@@ -94,9 +96,17 @@ export default class ChallengeListComponent implements OnInit {
     }
   }
 
+  ngOnDestroy() {
+    window.removeEventListener('beforeunload', this.handleRefresh);
+  }
+
   refreshChallenges(): void {
-    localStorage.removeItem('challenges'); // Clear the cached data
-    console.log("Cache cleared. Reloading challenges...");
+    this.challengeService.refreshChallenges();
     this.loadChallenges(); // Reload the challenges
   }
+
+  handleRefresh = (event: BeforeUnloadEvent) => {
+    localStorage.removeItem('challenges'); // Clear cache on refresh
+    console.log("Browser refresh detected. Cache cleared.");
+  };
 }
