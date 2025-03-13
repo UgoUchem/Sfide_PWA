@@ -1,0 +1,23 @@
+{
+    "changelog": [
+      {
+        "version": "1.0.1",
+        "date": "2025-03-15",
+        "changes": [
+          "Aggiunta modalità scura",
+          "Miglioramenti nelle prestazioni",
+          "Correzioni di bug relativi ai dati di login"
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date": "2025-03-01",
+        "changes": [
+          "Prima versione dell'app",
+          "Aggiunto sistema di login",
+          "Supporto per notifiche push"
+        ]
+      }
+    ]
+  }
+  
