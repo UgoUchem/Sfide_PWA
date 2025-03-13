@@ -14,7 +14,10 @@
       "Limitare lamentele",
       "Trasformare commenti negativi in positivi"
     ],
-    "maxViolations": 3
+    "maxViolations": 3,
+    "assignedTo": [
+      "everyone"
+    ]
   },
   {
     "id": "2",
@@ -30,7 +33,11 @@
     "actionsRequired": [
       "Mantenere routine disciplinate"
     ],
-    "maxViolations": 3
+    "maxViolations": 3,
+    "assignedTo": [
+      "Ivan",
+      "Precious"
+    ]
   },
   {
     "id": "3",
@@ -47,7 +54,10 @@
       "Invenzione di parole buffe",
       "Uso creativo delle parole inventate"
     ],
-    "maxViolations": 2
+    "maxViolations": 2,
+    "assignedTo": [
+      "Beauty"
+    ]
   },
   {
     "id": "4",
@@ -62,7 +72,10 @@
     "actionsRequired": [
       "Fare buone azioni quotidiane"
     ],
-    "maxViolations": 3
+    "maxViolations": 3,
+    "assignedTo": [
+      "everyone"
+    ]
   },
   {
     "id": "5",
@@ -78,7 +91,10 @@
       "Imparare nuove abilità",
       "Insegnare abilità agli altri"
     ],
-    "maxViolations": 2
+    "maxViolations": 2,
+    "assignedTo": [
+      "everyone"
+    ]
   },
   {
     "id": "6",
@@ -94,7 +110,10 @@
       "Imparare nuove abilità",
       "Insegnare abilità agli altri"
     ],
-    "maxViolations": 2
+    "maxViolations": 2,
+    "assignedTo": [
+      "Mario"
+    ]
   },
   {
     "id": "7",
@@ -110,6 +129,10 @@
       "Imparare nuove abilità",
       "Insegnare abilità agli altri"
     ],
-    "maxViolations": 2
+    "maxViolations": 2,
+    "assignedTo": [
+      "Chimma",
+      " Favour"
+    ]
   }
 ]

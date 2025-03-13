@@ -13,18 +13,83 @@ export class ChallengeService {
     signal<Challenge[]>(challengesData);
   private readonly http: HttpClient = inject(HttpClient);
 
-  getChallenges(): Observable<Challenge[]> {
-    const cachedChallenges:string|null = localStorage.getItem('challenges');
+  // getChallenges(userName: string): Observable<Challenge[]> {
+  //   const cachedChallenges: string | null = localStorage.getItem('challenges');
+
+  //   if (cachedChallenges) {
+  //     const allChallenges = JSON.parse(cachedChallenges);
+  //     const userChallenges = allChallenges.filter((challenge: Challenge) =>
+  //       // challenge.assignedTo.includes(userName)
+  //       challenge.assignedTo.some(
+  //         (name) => name.trim().toLowerCase() === userName.trim().toLowerCase()
+  //       )
+  //     );
+  //     return of(userChallenges); // Load cached data instantly
+  //   }
+  //   // return this.http.get<Challenge[]>(this.apiUrl).pipe(
+  //   //   timeout(2000),
+  //   //   catchError(() => {
+  //   //     console.warn('Server not available, loading local challenges.json');
+  //   //     localStorage.setItem('challenges', JSON.stringify(this.challenges()));
+  //   //     return of(this.challenges());
+  //   //   })
+  //   // );
+  //   return this.http.get<Challenge[]>(this.apiUrl).pipe(
+  //     timeout(2000),
+  //     catchError(() => {
+  //       console.warn('Server not available, loading local challenges.json');
+  //       localStorage.setItem('challenges', JSON.stringify(challengesData)); // Cache the challenges
+  //       return of(
+  //         challengesData.filter((challenge: Challenge) =>
+  //           challenge.assignedTo.some(
+  //             (name) =>
+  //               name.trim().toLowerCase() === userName.trim().toLowerCase()
+  //           )
+  //         )
+  //       );
+  //     })
+  //   );
+  // }
+
+  /**
+   * Retrieves challenges for a specific user.
+   * If the data is cached in localStorage, it uses that.
+   * Otherwise, it fetches from the API or falls back to local challenges.json.
+   */
+  getChallenges(userName: string): Observable<Challenge[]> {
+    const cachedChallenges: string | null = localStorage.getItem('challenges');
+    const normalizedUserName = userName.trim().toLowerCase();
 
     if (cachedChallenges) {
-      return of(JSON.parse(cachedChallenges)); // Load cached data instantly
+      const allChallenges = JSON.parse(cachedChallenges);
+
+      const userChallenges = allChallenges.filter((challenge: Challenge) => {
+        console.log("Checking user assignment:", userName, "vs", challenge.assignedTo);
+        // return challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("everyone");
+        challenge.assignedTo.some((name) => name.trim().toLowerCase() === normalizedUserName) || 
+        challenge.assignedTo.includes("everyone")
+        
+      });
+      
+      console.log('Cached Challenges:', allChallenges);
+      console.log('Filtered Challenges for', userName, ':', userChallenges);
+      
+      return of(userChallenges); // Load cached data instantly
     }
+
     return this.http.get<Challenge[]>(this.apiUrl).pipe(
       timeout(2000),
       catchError(() => {
         console.warn('Server not available, loading local challenges.json');
-        localStorage.setItem('challenges', JSON.stringify(this.challenges()));
-        return of(this.challenges());
+        localStorage.setItem('challenges', JSON.stringify(challengesData)); // Cache the challenges
+
+        const filteredChallenges = challengesData.filter((challenge: Challenge) =>
+          challenge.assignedTo.includes(userName) || challenge.assignedTo.includes("everyone")
+        );
+  
+        console.log("Loaded Local Challenges:", challengesData);
+        console.log("Filtered Challenges for", userName, ":", filteredChallenges);
+        return of(filteredChallenges);
       })
     );
   }

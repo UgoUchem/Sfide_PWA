@@ -12,7 +12,8 @@
       "difficulty": "Alta",
       "bonus": "Punti extra per commenti positivi",
       "actionsRequired": ["Limitare lamentele", "Trasformare commenti negativi in positivi"],
-      "maxViolations": 3
+      "maxViolations": 3,
+      "assignedTo": ["everyone"]
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
       "difficulty": "Molto alta",
       "bonus": "Nessun bonus",
       "actionsRequired": ["Mantenere routine disciplinate"],
-      "maxViolations": 3
+      "maxViolations": 3,
+      "assignedTo": ["Ivan", "Precious"]
     },
     {
       "id": "3",
@@ -40,7 +42,8 @@
       "difficulty": "Media",
       "bonus": "Premio per la parola più divertente",
       "actionsRequired": ["Invenzione di parole buffe", "Uso creativo delle parole inventate"],
-      "maxViolations": 2
+      "maxViolations": 2,
+      "assignedTo": ["Beauty"]
     },
     {
       "id": "4",
@@ -53,7 +56,8 @@
       "difficulty": "Alta",
       "bonus": "Premio per chi ha il maggior numero di azioni gentili",
       "actionsRequired": ["Fare buone azioni quotidiane"],
-      "maxViolations": 3
+      "maxViolations": 3,
+      "assignedTo": ["everyone"]
     },
     {
       "id": "5",
@@ -66,7 +70,8 @@
       "difficulty": "Media",
       "bonus": "Punti extra per insegnare abilità agli altri",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
-      "maxViolations": 2
+      "maxViolations": 2,
+      "assignedTo": ["everyone"]
     },
     {
       "id": "6",
@@ -79,7 +84,8 @@
       "difficulty": "Media",
       "bonus": "Punti extra per insegnare abilità agli altri",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
-      "maxViolations": 2
+      "maxViolations": 2,
+      "assignedTo": ["Mario"]
     },
     {
       "id": "7",
@@ -92,7 +98,8 @@
       "difficulty": "Media",
       "bonus": "Punti extra per insegnare abilità agli altri",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
-      "maxViolations": 2
+      "maxViolations": 2,
+      "assignedTo": ["Chidimma"," Favour"]
     }
   ]
 }

@@ -2,16 +2,16 @@ import {
   Component,
   inject,
   OnInit,
-  signal,
-  Signal,
-  WritableSignal,
+  signal, WritableSignal
 } from '@angular/core';
 import { ChallengeService } from '../services/challenge.service';
 import { Challenge } from '../models/challenge.model';
+import { Router, RouterModule } from '@angular/router';
+import AdminComponent from "../../login/components/admin.component";
 
 @Component({
   selector: 'app-challenge-list',
-  imports: [],
+  imports: [RouterModule, AdminComponent],
   template: `
     <button (click)="refreshChallenges()">Refresh</button>
     <div class="challenge-list">
@@ -38,6 +38,10 @@ import { Challenge } from '../models/challenge.model';
       </div>
       }
     </div>
+
+    @if(username === 'admin'){
+      <app-admin></app-admin>
+    }
   `,
   styles: `
     /* src/styles.css */
@@ -62,23 +66,37 @@ import { Challenge } from '../models/challenge.model';
 }
   `,
 })
-export class ChallengeListComponent implements OnInit {
+export default class ChallengeListComponent implements OnInit {
   private challengeService: ChallengeService = inject(ChallengeService);
-
+  private router: Router = inject(Router); // Inject Router
   protected readonly challenges: WritableSignal<Challenge[]> = signal([]);
+  protected readonly username: string | null = localStorage.getItem('username');
+
+
+  
 
   ngOnInit() {
-    this.loadChallenges();
+    console.log("Stored username:", localStorage.getItem('username'));
+    if (!this.username) {
+      // Redirect to login page if no user is logged in
+      console.warn("No username found. Redirecting to login...");
+      this.router.navigate(['/login']);
+    } else {
+      this.loadChallenges();
+    }
   }
 
   loadChallenges(): void {
-    this.challengeService
-      .getChallenges()
-      .subscribe((data) => this.challenges.set(data));
+    if (this.username) {
+      this.challengeService
+        .getChallenges(this.username)
+        .subscribe((data) => this.challenges.set(data));
+    }
   }
 
   refreshChallenges(): void {
     localStorage.removeItem('challenges'); // Clear the cached data
+    console.log("Cache cleared. Reloading challenges...");
     this.loadChallenges(); // Reload the challenges
   }
 }

@@ -1,6 +1,6 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component } from '@angular/core';
+import LoginComponent from "./features/login/components/login.component";
 import { RouterOutlet } from '@angular/router';
-import { ChallengeListComponent } from "./features/challenge/components/challenge-list.component";
 
 type Item = {
   id: number;
@@ -8,10 +8,11 @@ type Item = {
 };
 @Component({
   selector: 'app-root',
-  imports: [ChallengeListComponent],
+  imports: [RouterOutlet],
   template: `
     <h1>Welcome to {{ title }}!</h1>
-    <app-challenge-list></app-challenge-list>
+    <router-outlet></router-outlet>
+    <!-- <app-challenge-list></app-challenge-list> -->
   `,
   styles: [],
 })

@@ -7,4 +7,5 @@ export type Challenge = {
   bonus: string;
   actionsRequired: string[];
   maxViolations: number;
+  assignedTo: string[]; // list of usernames assigned
 };
