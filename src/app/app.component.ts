@@ -112,7 +112,7 @@ export class AppComponent implements OnInit {
 
   showUpdateNotification(): void {
     // Fetch changelog from the JSON file
-    fetch('changelog.json')
+    fetch('/changelog.json')
       .then((response) => response.json())
       .then((data) => {
         // Find the latest version info
@@ -131,7 +131,7 @@ export class AppComponent implements OnInit {
     if ('Notification' in window && Notification.permission === 'granted') {
       new Notification('🚀 New Update Available!', {
         body: 'Click to install the latest version.',
-        icon: '/assets/icons/icon-192x192.png',
+        icon: '/icons/anya-icon.png',
       }).onclick = () => this.activateUpdate();
     }
 
