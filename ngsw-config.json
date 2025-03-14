@@ -27,26 +27,13 @@
       }
     },
     {
-      "name": "json-files",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
+      "name": "challenges-json",
+      "installMode": "prefetch",
+      "updateMode": "lazy", 
       "resources": {
         "files": [
-          "/**/*.json"
+          "/assets/data/challenges.json"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "challenges-json",
-      "urls": [
-        "/challenges.json"
-      ],
-      "cacheConfig": {
-        "strategy": "freshness",  
-        "maxAge": "1h",           
-        "maxSize": 100
       }
     }
   ]
