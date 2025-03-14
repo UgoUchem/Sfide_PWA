@@ -25,6 +25,29 @@
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
+    },
+    {
+      "name": "json-files",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/**/*.json"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "challenges-json",
+      "urls": [
+        "/challenges.json"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",  
+        "maxAge": "1h",           
+        "maxSize": 100
+      }
     }
   ]
 }
