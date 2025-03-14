@@ -1,15 +1,15 @@
 {
     "changelog": [
       {
-        "version": "1.0.5",
-        "date": "2025-03-15",
+        "version": "1.0.0'",
+        "date": "2025-03-13",
         "changes": [
           "Aggiunta perks"
         ]
       },
       {
         "version": "1.0.1",
-        "date": "2025-03-15",
+        "date": "2025-03-14",
         "changes": [
           "Aggiunta modalità scura",
           "Miglioramenti nelle prestazioni",
@@ -17,37 +17,11 @@
         ]
       },
       {
-        "version": "1.0.3",
-        "date": "2025-03-16",
-        "changes": [
-          "Aggiunta modalità scura",
-          "Miglioramenti nelle prestazioni",
-          "Correzioni di bug relativi ai dati di login"
-        ]
-      },
-      {
-        "version": "1.0.0",
-        "date": "2025-03-01",
-        "changes": [
-          "Prima versione dell'app",
-          "Aggiunto sistema di login",
-          "Supporto per notifiche push"
-        ]
-      },
-      {
-        "version": "1.0.0",
-        "date": "2025-03-01",
-        "changes": [
-          "Prima versione dell'app",
-          "Aggiunto sistema di login",
-          "Supporto per notifiche push"
-        ]
-      },
-      {
-        "version": "1.0.7",
+        "version": "1.0.2",
         "date": "2025-03-15",
         "changes": [
-          "Aggiunta perksssss"
+          "Aggiunta lista",
+          "Miglioramenti nelle prestazioni"
         ]
       }
     ]

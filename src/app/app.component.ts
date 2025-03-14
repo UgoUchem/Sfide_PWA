@@ -116,7 +116,7 @@ export class AppComponent implements OnInit {
       .then((response) => response.json())
       .then((data) => {
         // Find the latest version info
-        const latestVersion = data.changelog[0]; // Assuming the latest version is the first item
+        const latestVersion = data.changelog[-1]; // Assuming the latest version is the first item
         this.changelog = `
           Version: ${latestVersion.version} (${latestVersion.date})
           Changes:

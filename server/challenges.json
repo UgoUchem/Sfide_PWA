@@ -7,7 +7,9 @@
       "rules": [
         "Non dire parolacce",
         "Limitare lamentele e commenti negativi",
-        "Trasformare commenti negativi in positivi per guadagnare punti extra"
+        "Trasformare commenti negativi in positivi per guadagnare punti extra",
+        "Non lamentarsi né cercare una via di fuga",
+        "Accetta che le difficoltà facciano parte della crescita"
       ],
       "difficulty": "Alta",
       "bonus": "Punti extra per commenti positivi",
@@ -99,7 +101,7 @@
       "bonus": "Punti extra per insegnare abilità agli altri",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
       "maxViolations": 2,
-      "assignedTo": ["Chidimma", "Favour"]
+      "assignedTo": ["Everyone"]
     },
     {
       "id": "8",
@@ -112,20 +114,6 @@
       "difficulty": "Media",
       "bonus": "Alla fine del mese, chi ha detto più motivi di gratitudine vince un premio speciale",
       "actionsRequired": ["Dire ad alta voce le cose per cui essere grati"],
-      "maxViolations": 3,
-      "assignedTo": ["Everyone"]
-    },
-    {
-      "id": "9",
-      "name": "Sfida del Detox Digitale",
-      "description": "Oltre a non dire parolacce, devono ridurre il tempo passato sul telefono/tablet/PC. Decidete insieme un massimo giornaliero di ore consentite.",
-      "rules": [
-        "Decidere insieme il massimo tempo giornaliero consentito",
-        "Non superare il limite di tempo per più di tre volte"
-      ],
-      "difficulty": "Alta",
-      "bonus": "Chi passa più tempo facendo attività alternative (lettura, sport, giochi offline) guadagna punti extra",
-      "actionsRequired": ["Ridurre l'uso di dispositivi elettronici", "Attività alternative"],
       "maxViolations": 3,
       "assignedTo": ["Everyone"]
     },
