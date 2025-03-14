@@ -98,14 +98,14 @@
   },
   {
     "id": "6",
-    "name": "Sfida delle BOHHHHHHHHHHHH",
-    "description": "Impara una nuova abilità ogni settimana e insegnala agli altri.",
+    "name": "Sfida del Controllo delle Emozioni",
+    "description": "Mantieni la calma.",
     "rules": [
-      "Impara una nuova abilità ogni settimana",
-      "Insegna un'abilità agli altri fratelli/sorelle per punti extra"
+      "Oltre a non dire parolacce, devono mantenere la calma anche in situazioni frustranti. Niente urla, scatti d'ira o musi lunghi per un mese!",
+      "Se reagiscono male (alzano la voce, sbuffano, rispondono male), ricevono un “cartellino giallo"
     ],
     "difficulty": "Media",
-    "bonus": "Punti extra per insegnare abilità agli altri",
+    "bonus": "Punti extra se dimostrano di gestire bene un momento di stress",
     "actionsRequired": [
       "Imparare nuove abilità",
       "Insegnare abilità agli altri"
@@ -117,7 +117,7 @@
   },
   {
     "id": "7",
-    "name": "SALAM ALAKYUMM",
+    "name": "Sfida dell'Ordine e della Responsabilità",
     "description": "Impara una nuova abilità ogni settimana e insegnala agli altri.",
     "rules": [
       "Impara una nuova abilità ogni settimana",
@@ -132,7 +132,62 @@
     "maxViolations": 2,
     "assignedTo": [
       "Chidimma",
-      " Favour"
+      "Favour"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Sfida della Gratitudine",
+    "description": "Ogni giorno devono trovare almeno una cosa per cui essere grati e dirlo ad alta voce.",
+    "rules": [
+      "Ogni giorno devono trovare almeno una cosa per cui essere grati",
+      "Dirlo ad alta voce"
+    ],
+    "difficulty": "Media",
+    "bonus": "Alla fine del mese, chi ha detto più motivi di gratitudine vince un premio speciale",
+    "actionsRequired": [
+      "Dire ad alta voce le cose per cui essere grati"
+    ],
+    "maxViolations": 3,
+    "assignedTo": [
+      "Everyone"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Sfida del Detox Digitale",
+    "description": "Oltre a non dire parolacce, devono ridurre il tempo passato sul telefono/tablet/PC. Decidete insieme un massimo giornaliero di ore consentite.",
+    "rules": [
+      "Decidere insieme il massimo tempo giornaliero consentito",
+      "Non superare il limite di tempo per più di tre volte"
+    ],
+    "difficulty": "Alta",
+    "bonus": "Chi passa più tempo facendo attività alternative (lettura, sport, giochi offline) guadagna punti extra",
+    "actionsRequired": [
+      "Ridurre l'uso di dispositivi elettronici",
+      "Attività alternative"
+    ],
+    "maxViolations": 3,
+    "assignedTo": [
+      "Everyone"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Sfida della Comunicazione Positiva",
+    "description": "Oltre a non dire parolacce, devono sforzarsi di comunicare in modo chiaro e rispettoso. Se vogliono qualcosa, devono chiederlo con cortesia (“Per favore, potresti…?”).",
+    "rules": [
+      "Comunicare in modo chiaro e rispettoso",
+      "Chiedere con cortesia se vogliono qualcosa"
+    ],
+    "difficulty": "Media",
+    "bonus": "Alla fine del mese, chi è stato più gentile nelle conversazioni riceve un premio speciale",
+    "actionsRequired": [
+      "Comunicare in modo gentile e rispettoso"
+    ],
+    "maxViolations": 2,
+    "assignedTo": [
+      "Everyone"
     ]
   }
 ]

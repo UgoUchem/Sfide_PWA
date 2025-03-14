@@ -25,16 +25,6 @@
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
-    },
-    {
-      "name": "challenges-json",
-      "installMode": "prefetch",
-      "updateMode": "lazy", 
-      "resources": {
-        "files": [
-          "/public/data/challenges.json"
-        ]
-      }
     }
   ]
 }
