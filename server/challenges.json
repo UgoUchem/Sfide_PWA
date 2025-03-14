@@ -2,7 +2,7 @@
   "challenges": [
     {
       "id": "1",
-      "name": "Sfida del Silenzio Strategico>OOOOOOP",
+      "name": "Sfida del Silenzio Strategico",
       "description": "Non dire parolacce, limitare lamentele e commenti negativi per un mese.",
       "rules": [
         "Non dire parolacce",
@@ -30,7 +30,7 @@
       "bonus": "Nessun bonus",
       "actionsRequired": ["Mantenere routine disciplinate"],
       "maxViolations": 3,
-      "assignedTo": ["Ivan", "Precious"]
+      "assignedTo": ["Everyone"]
     },
     {
       "id": "3",
@@ -46,20 +46,6 @@
       "actionsRequired": ["Invenzione di parole buffe", "Uso creativo delle parole inventate"],
       "maxViolations": 2,
       "assignedTo": ["Beauty"]
-    },
-    {
-      "id": "4",
-      "name": "Sfida della Pazienza e Gentilezza",
-      "description": "Compi almeno una buona azione al giorno.",
-      "rules": [
-        "Compi almeno una buona azione al giorno",
-        "Se passi 3 giorni senza una buona azione, sei eliminato"
-      ],
-      "difficulty": "Alta",
-      "bonus": "Premio per chi ha il maggior numero di azioni gentili",
-      "actionsRequired": ["Fare buone azioni quotidiane"],
-      "maxViolations": 3,
-      "assignedTo": ["Everyone"]
     },
     {
       "id": "5",
@@ -87,7 +73,7 @@
       "bonus": "Punti extra se dimostrano di gestire bene un momento di stress",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
       "maxViolations": 2,
-      "assignedTo": ["Mario"]
+      "assignedTo": ["Chidimma", "Beauty"]
     },
     {
       "id": "7",
@@ -108,7 +94,7 @@
       "name": "Sfida della Gratitudine",
       "description": "Ogni giorno devono trovare almeno una cosa per cui essere grati e dirlo ad alta voce.",
       "rules": [
-        "Ogni giorno devono trovare almeno una cosa per cui essere grati",
+        "Ogni giorno devi trovare almeno una cosa per cui essere grati",
         "Dirlo ad alta voce"
       ],
       "difficulty": "Media",
