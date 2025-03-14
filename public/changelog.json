@@ -1,6 +1,13 @@
 {
     "changelog": [
       {
+        "version": "1.0.5",
+        "date": "2025-03-15",
+        "changes": [
+          "Aggiunta perks"
+        ]
+      },
+      {
         "version": "1.0.1",
         "date": "2025-03-15",
         "changes": [
@@ -34,6 +41,13 @@
           "Prima versione dell'app",
           "Aggiunto sistema di login",
           "Supporto per notifiche push"
+        ]
+      },
+      {
+        "version": "1.0.7",
+        "date": "2025-03-15",
+        "changes": [
+          "Aggiunta perksssss"
         ]
       }
     ]
