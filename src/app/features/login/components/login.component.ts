@@ -20,7 +20,7 @@ import { LoginService } from '../services/login.service';
   template: `
     <div class="login-container">
       <div class="header">
-        <h2>OKAERI!</h2>
+        <h2>Welcome!</h2>
         <p>Log in and get started</p>
       </div>
 

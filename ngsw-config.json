@@ -32,7 +32,7 @@
       "updateMode": "lazy", 
       "resources": {
         "files": [
-          "/assets/data/challenges.json"
+          "/public/data/challenges.json"
         ]
       }
     }
