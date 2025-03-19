@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "open": "ng serve --open",
     "sync-challenges": "node server/sync-challenges.js",
     "build": "pnpm run sync-challenges && ng build",
     "watch": "ng build --watch --configuration development",

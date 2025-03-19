@@ -2,7 +2,7 @@
   "challenges": [
     {
       "id": "1",
-      "name": "Sfida del Silenzio Strategico",
+      "name": "Sfida del Generica",
       "description": "Non dire parolacce, limitare lamentele e commenti negativi per un mese.",
       "rules": [
         "Non dire parolacce",
@@ -23,51 +23,66 @@
       "description": "Mantenere una routine disciplinata per un mese.",
       "rules": [
         "Rifare il letto ogni mattina",
-        "Niente telefono a tavola",
-        "Finire i compiti prima di svagarsi"
+        "Finire i compiti prima di giocare",
+        "Niente telefono a tavola (se c'è mamma 😉)"
       ],
       "difficulty": "Molto alta",
       "bonus": "Nessun bonus",
       "actionsRequired": ["Mantenere routine disciplinate"],
       "maxViolations": 3,
-      "assignedTo": ["Everyone"]
+      "assignedTo": ["Precious, Ivan"]
     },
     {
       "id": "3",
-      "name": "Sfida della Creatività Pulita",
-      "description": "Ogni volta che senti il bisogno di dire una parolaccia, inventa una parola buffa.",
+      "name": "Sfida della Pulizia for Ivan",
+      "description": "Mantenere pulita la casa il più possibile",
       "rules": [
-        "Inventa una parola buffa per ogni parolaccia",
-        "Ricordarsi le parole inventate",
-        "Usare le parole in modo creativo"
+        "Pulisci la tua camera dallo sporco ingombrante",
+        "Passa cattura-polvere su ogni mobile e porta in TUTTA LA CASA!! ",
+        "Clean the kitchen table everytime Precious goes to allenamento"
       ],
       "difficulty": "Media",
-      "bonus": "Premio per la parola più divertente",
-      "actionsRequired": ["Invenzione di parole buffe", "Uso creativo delle parole inventate"],
+      "bonus": "Nessuno",
+      "actionsRequired": ["Rispettare questa regola, altrimenti sfida persa dopo 2 violazioni"],
       "maxViolations": 2,
-      "assignedTo": ["Beauty"]
+      "assignedTo": ["Ivan"]
+    },
+    {
+      "id": "4",
+      "name": "Sfida della Pulizia Precious",
+      "description": "Mantenere pulita la camera il più possibile",
+      "rules": [
+        "Pulisci la tua camera dallo sporco ingombrante (anche assieme ad Ivan)",
+        "Passa le ragnatele in tutte le camere della casa",
+        "Clean the kitchen table when you don't go to allenamento"
+      ],
+      "difficulty": "Media",
+      "bonus": "Nessuno",
+      "actionsRequired": ["Rispettare questa regola, altrimenti sfida persa dopo 2 violazioni"],
+      "maxViolations": 2,
+      "assignedTo": ["Precious"]
     },
     {
       "id": "5",
-      "name": "Sfida delle Multitasking Skills",
-      "description": "Impara una nuova abilità ogni settimana e insegnala agli altri.",
+      "name": "Sfida delle anti-litigi",
+      "description": "Niente litigi mattutini e sulle pulizie.",
       "rules": [
-        "Impara una nuova abilità ogni settimana",
-        "Insegna un'abilità agli altri fratelli/sorelle per punti extra"
+        "Non litigare di mattina per qualsiasi motivo, sopratutto per le pulizie d'ordine",
+        "Non litigare su chi deve pulire dove"
       ],
       "difficulty": "Media",
-      "bonus": "Punti extra per insegnare abilità agli altri",
-      "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
+      "bonus": "Punti extra se rimediate immediatamente ai litigi con una soluzione costruttiva e pacifica",
+      "actionsRequired": ["Don't fight"],
       "maxViolations": 2,
-      "assignedTo": ["Everyone"]
+      "assignedTo": ["Precious, Ivan"]
     },
     {
       "id": "6",
       "name": "Sfida del Controllo delle Emozioni",
       "description": "Mantieni la calma.",
       "rules": [
-        "Oltre a non dire parolacce, devono mantenere la calma anche in situazioni frustranti. Niente urla, scatti d'ira o musi lunghi per un mese!",
-        "Se reagiscono male (alzano la voce, sbuffano, rispondono male), ricevono un “cartellino giallo"
+        "Oltre a non dire parolacce, dovete mantenere la calma anche in situazioni frustranti. Niente urla, scatti d'ira o musi lunghi per un mese!",
+        "Se reagite male (alzate la voce, sbuffate, rispondete male), ricevete un “cartellino giallo"
       ],
       "difficulty": "Media",
       "bonus": "Punti extra se dimostrano di gestire bene un momento di stress",
@@ -87,7 +102,7 @@
       "bonus": "Punti extra per insegnare abilità agli altri",
       "actionsRequired": ["Imparare nuove abilità", "Insegnare abilità agli altri"],
       "maxViolations": 2,
-      "assignedTo": ["Everyone"]
+      "assignedTo": ["Favour, Chidimma, Beauty"]
     },
     {
       "id": "8",
